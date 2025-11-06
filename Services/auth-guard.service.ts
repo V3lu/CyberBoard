@@ -1,13 +1,22 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable, PLATFORM_ID } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthGuardService {
+  private readonly platformId = inject(PLATFORM_ID);
 
   constructor() { }
 
   GetToken(){
-    return sessionStorage.getItem("Token");
+    let token : string | null = '' 
+
+    try{
+      token = sessionStorage?.getItem("Token");
+    }
+    catch(err){ }
+
+    return token
+
   }
 }
