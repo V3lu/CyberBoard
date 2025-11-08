@@ -1,0 +1,58 @@
+.columns{
+    margin: auto;
+}
+
+.level{
+    margin-bottom: 0px;
+}
+
+.navbar{
+    height: 70px;
+    background-image: linear-gradient(to right, rgb(13, 0, 54), rgb(14, 0, 54));
+    color: white;
+}
+
+.navbar-item img {
+  height: 50px;      
+  width: auto;       
+  max-height: none;
+
+}
+
+.navbar-item:not(.logo-item){     
+  width: auto;
+  background-image: linear-gradient(to right, rgb(13, 0, 54), rgb(14, 0, 54));
+  color: white;
+  transition: 0.3s ease;      
+}
+
+
+ .navbar-menu.is-active {
+    display: block;
+  }
+
+  .navbar{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .navbar-menu {
+    flex-grow: initial!important;
+    flex-shrink: initial!important;
+  }
+
+  .navbar .navbar-menu{
+    flex-grow: initial;
+    flex-shrink: initial;
+  }
+
+  .navbar-end {
+    flex-grow: initial!important;
+    flex-shrink: initial!important;
+  }
+
+  .navbar .navbar-end{
+    flex-grow: initial;
+    flex-shrink: initial;
+  }
