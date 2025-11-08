@@ -2,14 +2,58 @@
     margin: auto;
 }
 
+#whoami{
+    pointer-events: none;
+    color: oklch(0.79 0.1 251.78);
+    border: 1px solid rgba(52, 80, 123, 0.77);
+    background-color: rgba(49, 67, 99, 0.144);
+    width: auto;
+    border-radius: 15px;
+    font-size: small;
+}
+
+#whoaminoborder{
+    color: darkgray;
+    border: 0px solid rgba(52, 80, 123, 0.77);
+    background-color: rgb(14, 0, 54);
+    width: 60%;
+    height: 55%;
+    border-radius: 8px;
+    font-size: large;
+    transition: 0.3s ease;
+}
+
+#whoaminoborder:hover{
+    transition: 0.3s ease;
+    color: rgb(105, 232, 252);
+    background-color: rgba(9, 41, 68, 0.842);
+}
+
 .level{
     margin-bottom: 0px;
 }
 
 .navbar{
-    height: 70px;
+    height: 85px;
     background-image: linear-gradient(to right, rgb(13, 0, 54), rgb(14, 0, 54));
     color: white;
+}
+
+input{
+  width: 400px;
+  border-radius: 15px;
+  background-color: transparent;
+  border: 2px solid rgb(24, 45, 80);
+  color: white;
+}
+
+::placeholder {
+  color: darkgray;
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Edge 12 -18 */
+  color: darkgray;
 }
 
 .navbar-item img {

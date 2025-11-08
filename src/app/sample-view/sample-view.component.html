@@ -2,11 +2,18 @@
 <section class="hero is-fullheight-with-navbar" id="main" #home>
     <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <a class="navbar-item noHover" href="#">
+        <a class="navbar-item noHover">
             <img src="assets/images/rect1.png">
         </a>
-        <a class="navbar-item noHover" href="#">
-
+        <a class="navbar-item noHover">
+            <div class="field">
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input" type="text" placeholder="Search missions, agents, protocols">
+                    <span class="icon is-small is-left">
+                    <i class="fas fa-search"></i>
+                    </span>
+                </div>
+            </div>
         </a>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -24,17 +31,25 @@
 
         <div class="navbar-end">
             <a class="navbar-item">
-                Home
+                <button class="button" id="whoami"><span class="icon is-small is-left">
+                    <i class="fas fa-power-off" style="color: rgb(57, 251, 43);"></i>
+                    </span>STATUS:&nbsp;<span style="color: rgb(57, 251, 43)">ONLINE</span></button>
             </a>
             <a class="navbar-item">
-                About
+                <button class="button" id="whoami"><span class="icon is-small is-left">
+                    <i class="fas fa-bolt" style="color: rgb(43, 230, 251);"></i>
+                    </span><span style="color: rgb(43, 230, 251)">0&nbsp;</span><span style="color: rgb(43, 230, 251)">ACTIVE</span></button>
             </a>
             <a class="navbar-item">
-                Skills
+                <button class="button" id="whoaminoborder"><span class="icon is-small is-left">
+                    <i class="fas fa-bell"></i>
+                    </span></button>
             </a>
 
             <a class="navbar-item">
-                Projects
+                <button class="button" id="whoaminoborder"><span class="icon is-small is-left">
+                    <i class="fas fa-gear"></i>
+                    </span></button>
             </a>
             <a class="navbar-item">
                 Contact
