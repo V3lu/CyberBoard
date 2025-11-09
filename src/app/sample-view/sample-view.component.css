@@ -31,7 +31,9 @@
 
 .level{
     margin-bottom: 0px;
+    height: 50px;
     background-image: linear-gradient(to right, rgb(11, 0, 40), rgb(11, 0, 40));
+    border: 2px solid rgb(21, 20, 62);
 }
 
 .navbar{
@@ -149,7 +151,26 @@ input{
   background-size: cover;
 }
 
+.lower{
+  border-radius: 10px;
+  height: 50%;
+  background-color: transparent;
+  color: darkgray;
+  padding: 5px;
+  border: 1px solid rgb(11, 0, 40);
+  transition: 0.3s ease;
+}
 
+.lower:hover{
+  background-color: rgba(23, 17, 81, 0.634);
+  transition: 0.3s ease;
+}
+
+.lower:focus{
+  border: 1px solid rgba(92, 117, 218, 0.786);
+  background-color: rgb(12, 11, 59);
+  color: rgb(105, 232, 252);
+}
 
 
 
