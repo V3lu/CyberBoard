@@ -15,7 +15,7 @@
 #whoaminoborder{
     color: darkgray;
     border: 0px solid rgba(52, 80, 123, 0.77);
-    background-color: rgb(14, 0, 54);
+    background-color: rgb(11, 0, 40);
     width: 60%;
     height: 55%;
     border-radius: 8px;
@@ -31,11 +31,12 @@
 
 .level{
     margin-bottom: 0px;
+    background-image: linear-gradient(to right, rgb(11, 0, 40), rgb(11, 0, 40));
 }
 
 .navbar{
     height: 85px;
-    background-image: linear-gradient(to right, rgb(13, 0, 54), rgb(14, 0, 54));
+    background-image: linear-gradient(to right, rgb(11, 0, 40), rgb(11, 0, 40));
     color: white;
 }
 
@@ -65,7 +66,7 @@ input{
 
 .navbar-item:not(.logo-item){     
   width: auto;
-  background-image: linear-gradient(to right, rgb(13, 0, 54), rgb(14, 0, 54));
+  background-image: linear-gradient(to right, rgb(11, 0, 40), rgb(11, 0, 40));
   color: white;
   transition: 0.3s ease;      
 }
@@ -105,11 +106,11 @@ input{
   height: auto;
   width: auto;
   padding: 0%;
-  background-color: rgb(14, 0, 54);
+  background-color: rgb(11, 0, 40);
 }
 
 #userphoto{
-  border-radius: 15px;
+  border-radius: 16px;
 }
 
 #mediac{
@@ -133,3 +134,42 @@ input{
   padding-left: 0%;
   padding-right: 0%;
 }
+
+.level-right{
+  margin-right: 21%;
+}
+
+.level-left{
+  margin-left: 21.2%;
+}
+
+.hero{
+  background-image: url('/assets/images/checkboard.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
