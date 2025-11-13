@@ -27,13 +27,14 @@ export class RegisterComponent {
             this.registerForm.get('Password')!.value
         ).pipe(
             catchError(error => {
-                return throwError(() => new Error("Error occured"));
+                return throwError(() => new Error(error));
             }
         ),
         map((response) => {
           const data = response.body;
           return{data};
-          })
+          }
+        )
         ).subscribe({
             next: (result) => {
                 console.log(result);
