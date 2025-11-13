@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AuthGuardService } from './auth-guard.service';
 
@@ -9,7 +9,18 @@ export class APIConnectionService {
 
   constructor(private http: HttpClient, private AGS: AuthGuardService) { }
 
-  loginControllerUrl = 'https://localhost:7017/api/Mission';
+  GetAllAgentMissionsUrl = 'https://localhost:7017/api/Mission/GetAllAgentMissions';
+  RegisterAgentFreshUrl = 'https://localhost:7017/api/Register/RegisterAgentFresh';
 
+  GetAllAgentMissions(Id : any){
+    const token = this.AGS.GetToken();
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
+    return this.http.post<any>(this.GetAllAgentMissionsUrl, {Id}, {observe: 'response', headers: headers })
+  }
 
+  RegisterAgentFresh(Name:string, HashedPassword:string) {
+    return this.http.post<any>(this.RegisterAgentFreshUrl, {Name, HashedPassword}, {observe: 'response'})
+  }
 }

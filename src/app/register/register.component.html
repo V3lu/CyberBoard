@@ -1,1 +1,56 @@
-<p>register works!</p>
+
+<section class="hero is-fullheight-with-navbar" id="main" #home>
+<section class="hero is-fullheight">
+  <div class="hero-body">
+    <div class="columns is-vcentered">
+    <div class="column">
+
+    </div>
+    <div class="column has-text-centered">
+      <div class="formContainer">
+      <form [formGroup]="registerForm" (ngSubmit)="Register($event)">
+        <div class="field">
+            <label class="label has-text-white">Agent Name</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-hovered is-rounded is-link" [value]="nameSignal()" (keyup)="assignUsername($event)" type="text" formControlName="Name">
+              <span class="icon is-small is-left">
+                <i class="fa fas fa-user"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fa fas fa-check" *ngIf="nameIcon"></i>
+              </span>
+            </div>
+          </div>
+          
+          <div class="field">
+            <label class="label has-text-white">Password</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-hovered is-rounded is-link" [value]="passwordSignal()" (keyup)="assignPassword($event)" type="password" formControlName="Password">
+              <span class="icon is-small is-left">
+                <i class="fa fas fa-key"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fa fas fa-check" *ngIf="passwordIcon"></i>
+              </span>
+            </div>
+            <p class="help is-danger" *ngIf="ispasswordProper">Password must be minimum 8 characters long,<br> contain at least 1 digit and at least 1 special sign</p>
+          </div>
+          
+
+          
+          <div class="field has-text-centered">
+            <div class="control">
+              <button id="btnsub" type="submit" class="button is-success">Register</button>
+            </div>
+          </div>
+          <br>
+          <p class="help">Already have an accout? <a [routerLink]="['']">Log in!</a></p>
+    </form>
+  </div>
+    </div>
+    <div class="column">
+      
+    </div>
+  </div>
+  </div>
+</section>
