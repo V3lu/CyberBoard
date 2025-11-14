@@ -2,3 +2,37 @@
   background-image: url('/assets/images/grid2.png');
   background-size: cover;
 }
+
+.formContainer{
+  padding-top: 50%;
+}
+
+input{
+  background-image: linear-gradient(to right, rgb(11, 0, 40), rgb(11, 0, 40));
+}
+
+button{
+  background-color: transparent;
+  border: 2px solid lightseagreen;
+  border-radius: 15px;
+  color: aliceblue;
+  transition: 0.3s ease;
+}
+
+button:hover{
+  border: 2px solid rgb(62, 233, 224);
+  box-shadow:
+    0 0 1px 1px #5f6dffb5, 
+    0 0 3px 5px rgba(53, 89, 249, 0.303),
+    0 0 10px 7px rgba(64, 117, 242, 0.351);
+    transition: 0.3s ease;
+  color: rgb(138, 199, 254);
+}
+
+button:disabled{
+  background-color: transparent;
+  border: 2px solid lightseagreen;
+  border-radius: 15px;
+  color: aliceblue;
+  transition: 0.3s ease;
+}

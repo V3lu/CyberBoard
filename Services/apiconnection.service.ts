@@ -11,6 +11,7 @@ export class APIConnectionService {
 
   GetAllAgentMissionsUrl = 'https://localhost:7017/api/Mission/GetAllAgentMissions';
   RegisterAgentFreshUrl = 'https://localhost:7017/api/Register/RegisterAgentFresh';
+  CheckEmailAvailabilityUrl = 'https://localhost:7017/api/Register/CheckEmailAvailability';
 
   GetAllAgentMissions(Id : any){
     const token = this.AGS.GetToken();
@@ -20,7 +21,11 @@ export class APIConnectionService {
     return this.http.post<any>(this.GetAllAgentMissionsUrl, {Id}, {observe: 'response', headers: headers })
   }
 
-  RegisterAgentFresh(Name:string, HashedPassword:string) {
-    return this.http.post<any>(this.RegisterAgentFreshUrl, {Name, HashedPassword}, {observe: 'response'})
+  RegisterAgentFresh(Name:string, HashedPassword:string, Email:string) {
+    return this.http.post<any>(this.RegisterAgentFreshUrl, {Name, HashedPassword, Email}, {observe: 'response'})
+  }
+
+  CheckEmailAvailability(Email:string){
+    return this.http.post<any>(this.CheckEmailAvailabilityUrl, {Email}, {observe: 'response'})
   }
 }
