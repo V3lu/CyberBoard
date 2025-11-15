@@ -9,6 +9,18 @@
 
 input{
   background-image: linear-gradient(to right, rgb(11, 0, 40), rgb(11, 0, 40));
+  color: aliceblue
+}
+
+.control > span > i{
+  color: rgb(81, 114, 221);
+  transition: 0.4s ease;
+}
+
+.control:hover > span > i{
+  color: rgb(151, 234, 240);
+  transform: scaleX(1.1) scaleY(1.1);
+  transition: 0.4s ease;
 }
 
 button{
@@ -35,4 +47,122 @@ button:disabled{
   border-radius: 15px;
   color: aliceblue;
   transition: 0.3s ease;
+}
+
+#whoami{
+    pointer-events: none;
+    color: oklch(0.79 0.1 251.78);
+    border: 1px solid rgba(52, 80, 123, 0.77);
+    background-color: rgba(49, 67, 99, 0.144);
+    width: auto;
+    border-radius: 15px;
+    font-size: small;
+}
+
+#whoaminoborder{
+    color: darkgray;
+    border: 0px solid rgba(52, 80, 123, 0.77);
+    background-color: rgb(11, 0, 40);
+    width: 60%;
+    height: 55%;
+    border-radius: 8px;
+    font-size: large;
+    transition: 0.3s ease;
+}
+
+#whoaminoborder:hover{
+    transition: 0.3s ease;
+    color: rgb(105, 232, 252);
+    background-color: rgba(9, 41, 68, 0.842);
+}
+
+.level{
+    margin-bottom: 0px;
+    height: 50px;
+    background-image: linear-gradient(to right, rgb(11, 0, 40), rgb(11, 0, 40));
+    border: 2px solid rgb(21, 20, 62);
+}
+
+.navbar{
+    height: 85px;
+    background-image: linear-gradient(to right, rgb(11, 0, 40), rgb(11, 0, 40));
+    color: white;
+}
+
+::placeholder {
+  color: darkgray;
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Edge 12 -18 */
+  color: darkgray;
+}
+
+.navbar-item img {
+  height: 50px;      
+  width: auto;       
+  max-height: none;
+
+}
+
+.navbar-item:not(.logo-item){     
+  width: auto;
+  background-image: linear-gradient(to right, rgb(11, 0, 40), rgb(11, 0, 40));
+  color: white;
+  transition: 0.3s ease;      
+}
+
+
+.navbar-menu.is-active {
+  display: block;
+}
+
+.navbar{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.navbar-menu {
+  flex-grow: initial!important;
+  flex-shrink: initial!important;
+}
+
+.navbar .navbar-menu{
+  flex-grow: initial;
+  flex-shrink: initial;
+}
+
+.navbar-end {
+  flex-grow: initial!important;
+  flex-shrink: initial!important;
+}
+
+.navbar .navbar-end{
+  flex-grow: initial;
+  flex-shrink: initial;
+}
+
+#userview{
+  height: auto;
+  width: auto;
+  padding: 0%;
+  background-color: rgb(11, 0, 40);
+}
+
+#userphoto{
+  border-radius: 16px;
+}
+
+#mediac{
+  margin-top: 6px;
+}
+
+#medial{
+  margin-right: 8px;
+}
+
+#status{
+  margin-left: 20px;
+  padding-right: 0px;
 }

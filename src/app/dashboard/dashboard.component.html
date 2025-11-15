@@ -1,1 +1,162 @@
-<p>dashboard works!</p>
+
+<section class="hero is-fullheight-with-navbar" id="main" #home>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item noHover">
+            <img src="assets/images/rect1.png">
+        </a>
+        <a class="navbar-item noHover">
+            <div class="field">
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input" type="text" placeholder="Search missions, agents, protocols">
+                    <span class="icon is-small is-left">
+                    <i class="fas fa-search"></i>
+                    </span>
+                </div>
+            </div>
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+
+        </div>
+
+        <div class="navbar-end">
+            <a class="navbar-item" id="status">
+                <button class="button" id="whoami"><span class="icon is-small is-left">
+                    <i class="fas fa-power-off" style="color: rgb(57, 251, 43);"></i>
+                    </span>STATUS:&nbsp;<span style="color: rgb(57, 251, 43)">ONLINE</span></button>
+            </a>
+            <a class="navbar-item">
+                <button class="button" id="whoami"><span class="icon is-small is-left">
+                    <i class="fas fa-bolt" style="color: rgb(43, 230, 251);"></i>
+                    </span><span style="color: rgb(43, 230, 251)">0&nbsp;</span><span style="color: rgb(43, 230, 251)">ACTIVE</span></button>
+            </a>
+            <a class="navbar-item" id="bell">
+                <button class="button" id="whoaminoborder"><span class="icon is-small is-left">
+                    <i class="fas fa-bell"></i>
+                    </span></button>
+            </a>
+
+            <a class="navbar-item" id="gear">
+                <button class="button" id="whoaminoborder"><span class="icon is-small is-left">
+                    <i class="fas fa-gear"></i>
+                    </span></button>
+            </a>
+            <a class="navbar-item">
+                <div class="card">
+                    <div class="card-content" id="userview">
+                        <div class="media">
+                            <div class="media-left" id="medial">
+                            
+                                <img
+                                    src="https://bulma.io/assets/images/placeholders/96x96.png"
+                                    alt="Placeholder image"
+                                    id="userphoto"
+                                />
+                                
+                            </div>
+                            <div class="media-content" id="mediac">
+                                <p class="title is-6" style="color: white; font-size:medium;">RANK</p>
+                                <p class="subtitle is-6" style="color: darkgray; font-size: small;">LEVEL</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    </nav>
+
+<nav class="level">
+  <div class="level-left">
+    <div class="level-item">
+      <p class="control">
+          <button class="button lower"><span style="font-size: small;">MY MISSIONS</span></button>
+        </p>
+    </div>
+    <div class="level-item">
+      <p class="control">
+          <button class="button lower"><span style="font-size: small;">CRITICAL</span></button>
+        </p>
+    </div>
+    <div class="level-item">
+      <p class="control">
+          <button class="button lower"><span style="font-size: small;">UNASSIGNED MISSIONS</span></button>
+        </p>
+    </div>
+    <div class="level-item">
+      <p class="control">
+          <button class="button lower"><span style="font-size: small;">ARCHIVED</span></button>
+        </p>
+    </div>
+    
+  </div>
+
+  <div class="level-right">
+    <p class="level-item"><span style="color: darkgray; font-size: small;">LAST SYNC:&nbsp;</span><span style="color: rgb(105, 232, 252); font-size: small;">0 MIN AGO</span></p>
+  </div>
+</nav>
+
+<section class="hero is-fullheight">
+  <div class="hero-body">
+    <div class="columns is-multiline" id="cols">
+        <div class="column is-one-quarter">
+            <div class="box boxevery1 has-text-left">
+              <span style="color: rgb(27, 193, 219); font-size: medium;">ALL MISSIONS</span>
+              <br>
+              <span style="color: white; font-size: xx-large;">10</span>
+            </div>
+        </div>
+        <div class="column is-one-quarter">
+            <div class="box boxevery1 has-text-left">
+              <span style="color: rgb(94, 125, 235); font-size: medium;">IN PROGRESS</span>
+              <br>
+              <span style="color: white; font-size: xx-large;">2</span>
+            </div>
+        </div>
+        <div class="column is-one-quarter">
+            <div class="box boxevery1 has-text-left">
+              <span style="color: rgb(160, 100, 173); font-size: medium;">IN REVIEW</span>
+              <br>
+              <span style="color: white; font-size: xx-large;">2</span>
+            </div>
+        </div>
+        <div class="column is-one-quarter">
+            <div class="box boxevery1 has-text-left">
+              <span style="color: rgb(50, 200, 62); font-size: medium;">DEPLOYED</span>
+              <br>
+              <span style="color: white; font-size: xx-large;">2</span>
+            </div>
+        </div>
+        <div class="column is-one-quarter">
+            <div class="box boxevery2 has-text-left">
+              <span style="color: white; font-size: medium;">BACKLOG</span>
+            </div>
+        </div>
+        <div class="column is-one-quarter">
+            <div class="box boxevery2 has-text-left">
+              <span style="color: white; font-size: medium;">IN PROGRESS</span>
+            </div>
+        </div>
+        <div class="column is-one-quarter">
+            <div class="box boxevery2 has-text-left">
+              <span style="color: white; font-size: medium;">CODE REVIEW</span>
+            </div>
+        </div>
+        <div class="column is-one-quarter">
+            <div class="box boxevery2 has-text-left">
+              <span style="color: white; font-size: medium;">DEPLOYED</span>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>

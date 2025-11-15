@@ -5,13 +5,13 @@ import { Router } from "@angular/router";
 
 export const TokenGuard = () => {
 
-  const TC = inject(AuthGuardService);
+  const AGS = inject(AuthGuardService);
   const router = inject(Router);
-  if(TC.GetToken() != null){
+  if(AGS.GetToken() != null && AGS.GetToken() != ''){
     return true;
   }
   else{
-    router.navigate(["/Guest"]);
+    router.navigate(['/Guest']);
     return false;
   }
 }

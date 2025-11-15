@@ -1,1 +1,82 @@
-<p>login works!</p>
+<section class="hero is-fullheight-with-navbar" id="main" #home>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item noHover">
+            <img src="assets/images/rect1.png">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        </a>
+
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+
+        </div>
+
+        <div class="navbar-end">
+            <a class="navbar-item" id="status">
+                <button class="button" id="whoami"><span class="icon is-small is-left">
+                    <i class="fas fa-power-off" style="color: rgb(57, 251, 43);"></i>
+                    </span>STATUS:&nbsp;<span style="color: rgb(57, 251, 43)">ONLINE</span></button>
+            </a>
+        </div>
+    </div>
+  </nav>
+
+
+
+<section class="hero is-fullheight-with-navbar" id="main" #home>
+    <div class="columns is-vcentered">
+      <div class="column">
+
+      </div>
+      <div class="column is-one-quarter has-text-centered">
+        <div class="formContainer">
+        <form [formGroup]="loginForm" (ngSubmit)="Login($event)">
+          <div class="field">
+              <img src="assets/images/text3.png" width="40%">
+              <div class="control has-icons-left has-icons-right">
+                <input class="input is-hovered is-rounded is-link" [value]="emailSignal()" (keyup)="assignEmail($event)" type="text" formControlName="Email">
+                <span class="icon is-small is-left">
+                  <i class="fa fas fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i class="fa fas fa-check" *ngIf="emailIcon"></i>
+                </span>
+              </div>
+            </div><br>
+            
+            <div class="field">
+              <img src="assets/images/text4.png" width="57%">
+              <div class="control has-icons-left has-icons-right">
+                <input class="input is-hovered is-rounded is-link" [value]="passwordSignal()" (keyup)="assignPassword($event)" type="password" formControlName="Password">
+                <span class="icon is-small is-left">
+                  <i class="fa fas fa-key"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i class="fa fas fa-check" *ngIf="passwordIcon"></i>
+                </span>
+              </div>
+              <p class="help is-danger" *ngIf="!isPasswordProper">Password must be minimum 8 characters long,<br> contain at least 1 digit and at least 1 special sign</p>
+            </div><br>
+            
+            <div class="field has-text-centered">
+              <div class="control">
+                <button id="btnsub" type="submit" class="button" [disabled]="true">Log in</button>
+              </div>
+            </div>
+            <p class="help">Don't have an account? <a [routerLink]="['/Register']">Register!</a></p>
+      </form>
+    </div>
+    </div>
+    <div class="column">
+      
+    </div>
+  </div>
+</section>

@@ -1,3 +1,35 @@
+<section class="hero is-fullheight-with-navbar" id="main" #home>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item noHover">
+            <img src="assets/images/rect1.png">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        </a>
+
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+
+        </div>
+
+        <div class="navbar-end">
+            <a class="navbar-item" id="status">
+                <button class="button" id="whoami"><span class="icon is-small is-left">
+                    <i class="fas fa-power-off" style="color: rgb(57, 251, 43);"></i>
+                    </span>STATUS:&nbsp;<span style="color: rgb(57, 251, 43)">ONLINE</span></button>
+            </a>
+        </div>
+    </div>
+  </nav>
+
+
 
 <section class="hero is-fullheight-with-navbar" id="main" #home>
     <div class="columns is-vcentered">
@@ -8,7 +40,7 @@
         <div class="formContainer">
         <form [formGroup]="registerForm" (ngSubmit)="Register($event)">
           <div class="field">
-              <img src="assets/images/text2.png" width="28%">
+              <img src="assets/images/text2.png" width="40%">
               <div class="control has-icons-left has-icons-right">
                 <input class="input is-hovered is-rounded is-link" [value]="nameSignal()" (keyup)="assignUsername($event)" type="text" formControlName="Name">
                 <span class="icon is-small is-left">
@@ -21,7 +53,7 @@
             </div><br>
 
             <div class="field">
-              <img src="assets/images/text3.png" width="28%">
+              <img src="assets/images/text3.png" width="40%">
               <div class="control has-icons-left has-icons-right">
                 <input class="input is-hovered is-rounded is-link" [value]="emailSignal()" (keyup)="assignEmail($event)" type="text" formControlName="Email">
                 <span class="icon is-small is-left">
@@ -35,7 +67,7 @@
             </div><br>
             
             <div class="field">
-              <img src="assets/images/text4.png" width="40%">
+              <img src="assets/images/text4.png" width="57%">
               <div class="control has-icons-left has-icons-right">
                 <input class="input is-hovered is-rounded is-link" [value]="passwordSignal()" (keyup)="assignPassword($event)" type="password" formControlName="Password">
                 <span class="icon is-small is-left">

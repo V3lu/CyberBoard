@@ -17,6 +17,5 @@ export class AuthGuardService {
     catch(err){ }
 
     return token
-
   }
 }
