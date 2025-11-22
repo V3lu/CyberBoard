@@ -10,6 +10,7 @@ export class APIConnectionService {
   constructor(private http: HttpClient, private AGS: AuthGuardService) { }
 
   GetAllAgentMissionsUrl = 'https://localhost:7017/api/Mission/GetAllAgentMissions';
+  AddMissionUrl = 'https://localhost:7017/api/Mission/AddMission';
   RegisterAgentFreshUrl = 'https://localhost:7017/api/Register/RegisterAgentFresh';
   CheckEmailAvailabilityUrl = 'https://localhost:7017/api/Register/CheckEmailAvailability';
   LoginAgentUrl = 'https://localhost:7017/api/Login/LoginAgent';
@@ -20,6 +21,14 @@ export class APIConnectionService {
       'Authorization': `Bearer ${token}`
     });
     return this.http.post<any>(this.GetAllAgentMissionsUrl, {Id}, {observe: 'response', headers: headers })
+  }
+
+  AddMission(Id: any){
+    const token = this.AGS.GetToken();
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
+    return this.http.post<any>(this.AddMissionUrl, {Id}, {observe: 'response', headers: headers })
   }
 
   RegisterAgentFresh(Name:string, HashedPassword:string, Email:string) {

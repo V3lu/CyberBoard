@@ -47,7 +47,8 @@ export class LoginComponent {
         .subscribe({
             next: (response) => {
                 console.log(response);
-                this.LoggedAgent.setLoggedAgent(response.body)
+                this.LoggedAgent.setLoggedAgent(response.body.currentAgent)
+                sessionStorage.setItem("Token", response.body.token)
             }
         })
     }
