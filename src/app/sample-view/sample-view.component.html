@@ -108,7 +108,7 @@
 
 <section class="hero is-fullheight">
   <div class="columns is-multiline" id="cols">
-      <div class="column is-one-quarter">
+      <div class="column is-one-quarter test">
           <div class="box boxevery1 has-text-left">
             <span style="color: rgb(27, 193, 219); font-size: medium;">ALL MISSIONS</span>
             <br>
@@ -156,5 +156,13 @@
             <span style="color: white; font-size: medium;">DEPLOYED</span>
           </div>
       </div>
+
+      @for (mission of missions; track $index) {
+        <div class="column is-one-quarter">
+          <div class="box boxevery3 has-text-left">
+            <span>{{mission.Name}}</span>
+          </div>
+        </div>
+      }
   </div>
 </section>

@@ -294,6 +294,7 @@ input{
   -moz-border-radius: 15px; 
   -webkit-border-radius: 15px;
   border-radius: 15px;
+  margin-bottom: 6%;
 }
 
 .boxevery2:hover{
@@ -311,11 +312,39 @@ input{
   border-radius: 15px;
 }
 
+
+.boxevery3{
+  border: 1px solid rgba(128, 128, 128, 0.362);
+  background: linear-gradient(to left, rgb(0, 6, 57), rgb(0, 0, 39));
+  transition: 0.3s ease;
+  -moz-border-radius: 15px; 
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+}
+
+.boxevery3:hover{
+  background: radial-gradient(circle at bottom center,
+      rgb(20, 177, 67) 0%,      /* turquoise glow bottom-left */
+      rgb(30, 127, 11) 35%,       /* smooth fade */
+      rgb(54, 215, 151) 100%),        /* dark navy base */
+  radial-gradient(circle at top right,
+      rgba(22, 95, 115, 0.547) 0%,      /* cyan glow top-right */
+      rgb(18, 53, 160) 40%,
+      transparent 80%);
+  transition: 0.3s ease;
+  -moz-border-radius: 15px; 
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+}
+
 #cols{
-  width: 1500px;
+  width: 1200px;
   margin-top: 1%;
 }
 
+.test{
+  padding-bottom: 1%;
+}
 
 
 
