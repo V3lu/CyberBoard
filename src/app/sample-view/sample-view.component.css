@@ -269,6 +269,8 @@ input{
   -webkit-border-radius: 15px;
   border-radius: 15px;
   transition: 0.4s ease;
+  padding-bottom: 3%;
+  padding-top: 3%;
 }
 
 .boxevery1:hover{

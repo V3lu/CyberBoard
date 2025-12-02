@@ -110,30 +110,30 @@
   <div class="columns is-multiline" id="cols">
       <div class="column is-one-quarter test">
           <div class="box boxevery1 has-text-left">
-            <span style="color: rgb(27, 193, 219); font-size: medium;">ALL MISSIONS</span>
+            <span class="spanbox1" style="color: rgb(27, 193, 219); font-size: medium;">ALL MISSIONS</span>
             <br>
-            <span style="color: white; font-size: xx-large;">10</span>
+            <span class="spanbox1" style="color: white; font-size: xx-large;">10</span>
           </div>
       </div>
       <div class="column is-one-quarter">
           <div class="box boxevery1 has-text-left">
-            <span style="color: rgb(94, 125, 235); font-size: medium;">IN PROGRESS</span>
+            <span class="spanbox1" style="color: rgb(94, 125, 235); font-size: medium;">IN PROGRESS</span>
             <br>
-            <span style="color: white; font-size: xx-large;">2</span>
+            <span class="spanbox1" style="color: white; font-size: xx-large;">2</span>
           </div>
       </div>
       <div class="column is-one-quarter">
           <div class="box boxevery1 has-text-left">
-            <span style="color: rgb(160, 100, 173); font-size: medium;">IN REVIEW</span>
+            <span class="spanbox1" style="color: rgb(160, 100, 173); font-size: medium;">IN REVIEW</span>
             <br>
-            <span style="color: white; font-size: xx-large;">2</span>
+            <span class="spanbox1" style="color: white; font-size: xx-large;">2</span>
           </div>
       </div>
       <div class="column is-one-quarter">
           <div class="box boxevery1 has-text-left">
-            <span style="color: rgb(50, 200, 62); font-size: medium;">DEPLOYED</span>
+            <span class="spanbox1" style="color: rgb(50, 200, 62); font-size: medium;">DEPLOYED</span>
             <br>
-            <span style="color: white; font-size: xx-large;">2</span>
+            <span class="spanbox1" style="color: white; font-size: xx-large;">2</span>
           </div>
       </div>
       <div class="column is-one-quarter">
@@ -160,7 +160,8 @@
       @for (mission of missions; track $index) {
         <div class="column is-one-quarter">
           <div class="box boxevery3 has-text-left">
-            <span>{{mission.Name}}</span>
+            <span>{{mission.Name}}</span><br>
+            <span>{{mission.Description}}</span>
           </div>
         </div>
       }
